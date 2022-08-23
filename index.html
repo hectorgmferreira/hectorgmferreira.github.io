@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js"></script>
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+  <title>Decodificador de Texto</title>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="icone">
+      <img src="img/Vector.svg" class="logo">
+    </div>
+    <div class='campodetexto'>
+      <textarea type="text" id="texto" placeholder="Digite seu texto"></textarea>
+      <img src="img/Vector2.svg" class="icone">
+      <span>Apenas letras minúsculas e sem acento.</span>
+      <div class="botoes">
+        <button onclick="converter()" class="botao1">Criptografar</button>
+        <button onclick="desconverter()" class="botao2">Descriptografar</button>
+      </div>
+    </div>
+    <div id="resultado">
+      <img id="imagem" src="img/Vector3.svg">
+      <div id="frases">
+        <p id="novamensagem"></p>
+        <textarea type="text" id="msgencriptada" style="display:none"></textarea>
+        <button onclick="copiar()" style="display:none" id="botao3">Copiar</button>
+        <h2>Nenhuma mensagem encontrada</h2>
+        <p id="frase">Digite um texto que você deseja criptografar ou descriptografar.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
