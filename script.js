@@ -26,7 +26,8 @@ function processando() {
   document.querySelector("#frase").style.display = "none";
   document.querySelector("#msgencriptada").innerHTML = input;
   document.getElementById("msgencriptada").style.display = "block";
-  document.querySelector("#resultado").style.padding = "30px 32px";
+  document.querySelector("#resultado").style.padding = "0px";
+  document.querySelector("#resultado").style.alignContent = "space-between";
   document.getElementById("botao3").style.display = "block";
 }
 
@@ -41,7 +42,7 @@ function converter() {
     document.querySelector("#frase").style.display = "block";
     document.getElementById("msgencriptada").style.display = "none";
     document.getElementById("botao3").style.display = "none";
-    document.querySelector("#resultado").style.padding = "150px 32px";
+    document.querySelector("#resultado").style.alignContent = "center";
   }
 }
 
@@ -56,7 +57,7 @@ function desconverter() {
     document.querySelector("#frase").style.display = "block";
     document.getElementById("msgencriptada").style.display = "none";
     document.getElementById("botao3").style.display = "none";
-    document.querySelector("#resultado").style.padding = "150px 32px";
+    document.querySelector("#resultado").style.alignContent = "center";
   }
 }
 

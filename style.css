@@ -1,14 +1,20 @@
+html {
+  margin: 60px 60px 0px 60px;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background: #f3f5fc;
-  margin: 60px 60px 0 60px;
+  margin: 0px;
+
+  flex-grow: 1;
 }
 
 .grid {
   background: #f3f5fc;
   display: grid;
-  grid-template-columns: auto 1fr 400px;
-  gap: 130px;
+  grid-template-columns: auto 1fr auto;
+  gap: 50px;
 }
 
 #texto {
@@ -22,6 +28,8 @@ body {
   box-shadow: none;
   outline: 0;
   color: #0a3871;
+  width: 100%;
+  resize: none;
 }
 
 .icone {
@@ -29,21 +37,30 @@ body {
 }
 
 .campodetexto {
-  background-color: #f3f5fc;
+  display: grid;
+  align-content: space-between;
+}
+
+.aviso {
+  place-content: end;
+}
+
+#frases {
+  max-width: 30ch;
 }
 
 #resultado {
   display: grid;
-  padding: 150px 32px;
   background-color: white;
   border-radius: 30px;
   text-align: center;
-  place-items: top;
+  place-items: center;
+  height: calc(100vh - 100px);
+  align-content: center;
 }
 
 button {
   padding: 24px;
-  gap: 8px;
 
   width: 328px;
   height: 67px;
@@ -52,17 +69,11 @@ button {
   border-radius: 24px;
   color: white;
   margin-top: 30px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 button:active {
   width: 335px;
-}
-
-#texto {
-  width: 95%;
-  height: 50vh;
-  resize: none;
 }
 
 #msgencriptada {
@@ -95,4 +106,61 @@ span {
   background: white;
   color: #0a3871;
   border: 1px solid #0a3871;
+  max-width: 100%;
+  margin: 20px;
+}
+
+#imagem {
+  margin: 0px 16px;
+}
+
+@media (max-width: 920px) {
+  html {
+    margin: 0px;
+  }
+  body {
+    margin: 20px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+  #resultado {
+    height: auto;
+    padding: 0px;
+    margin-top: 20px;
+    max-width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 0px;
+  }
+
+  #imagem {
+    display: none;
+  }
+
+  .botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  span {
+    justify-content: center;
+  }
+
+  #texto {
+    margin-top: 50px;
+  }
+
+  button {
+    margin: 15px 5px;
+  }
+}
+
+#msgencriptada {
+  width: 100%;
+  height: auto;
 }

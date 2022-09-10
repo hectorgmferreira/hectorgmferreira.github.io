@@ -22,11 +22,14 @@
     </div>
     <div class='campodetexto'>
       <textarea type="text" id="texto" placeholder="Digite seu texto"></textarea>
-      <img src="img/Vector2.svg" class="icone">
-      <span>Apenas letras minúsculas e sem acento.</span>
-      <div class="botoes">
-        <button onclick="converter()" class="botao1">Criptografar</button>
-        <button onclick="desconverter()" class="botao2">Descriptografar</button>
+      <div>
+        <div class="aviso"> <img src="img/Vector2.svg" class="icone">
+          <span>Apenas letras minúsculas e sem acento.</span>
+        </div>
+        <div class="botoes">
+          <button onclick="converter()" class="botao1">Criptografar</button>
+          <button onclick="desconverter()" class="botao2">Descriptografar</button>
+        </div>
       </div>
     </div>
     <div id="resultado">
@@ -34,10 +37,10 @@
       <div id="frases">
         <p id="novamensagem"></p>
         <textarea type="text" id="msgencriptada" style="display:none"></textarea>
-        <button onclick="copiar()" style="display:none" id="botao3">Copiar</button>
         <h2>Nenhuma mensagem encontrada</h2>
         <p id="frase">Digite um texto que você deseja criptografar ou descriptografar.</p>
       </div>
+      <button onclick="copiar()" style="display:none" id="botao3">Copiar</button>
     </div>
   </div>
 </body>
